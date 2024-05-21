@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
       console.log(err);
       res.status(500).send({ error: "An error occurred while fetching data" });
     });
+  if (params === undefined) {
+    res.send({ error: "Mau ngapain?" });
+  }
 });
 
 app.listen(PORT, () => {
